@@ -120,6 +120,11 @@ class CollectionVersionViewSet(api_base.LocalSettingsMixin,
         return Response(serializer.data)
 
 
+class CollectionVersionDependencyViewSet(api_base.LocalSettingsMixin,
+                                         pulp_ansible_views.CollectionVersionDependencyViewSet):
+    permission_classes = [access_policy.CollectionAccessPolicy]
+
+
 class CollectionVersionDocsViewSet(api_base.LocalSettingsMixin,
                                    pulp_ansible_views.CollectionVersionDocsViewSet):
     permission_classes = [access_policy.CollectionAccessPolicy]
