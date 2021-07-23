@@ -2,6 +2,8 @@ MIDDLEWARE = [
     'django_prometheus.middleware.PrometheusBeforeMiddleware',
     # BEGIN: Pulp standard middleware
     'django.middleware.security.SecurityMiddleware',
+    "requestlogs.middleware.RequestLogsMiddleware",
+    "requestlogs.middleware.RequestIdMiddleware",
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
