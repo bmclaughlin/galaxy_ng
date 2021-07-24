@@ -84,13 +84,16 @@ RUN set -ex; \
              /var/lib/pulp/artifact \
              /var/lib/pulp/tmp \
              /tmp/ansible \
+    && touch /tmp/audit.log \
     && chown ${USER_NAME}:${USER_GROUP} /var/lib/pulp/artifact \
     && chown ${USER_NAME}:${USER_GROUP} /var/lib/pulp/tmp \
     && chown ${USER_NAME}:${USER_GROUP} \
         /tmp/ansible \
         /etc/ansible \
+        /tmp/audit.log \
     && chmod -R 0775 /app/docker/entrypoint.sh \
                      /app/docker/bin/* \
+                     /tmp/audit.log \
     && mv /app/docker/entrypoint.sh /entrypoint.sh \
     && mv /app/ansible.cfg /etc/ansible/ansible.cfg \
     && mv /app/docker/bin/* /usr/local/bin

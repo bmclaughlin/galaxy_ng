@@ -1,0 +1,2 @@
+django-ipware==3.0.2
+django-requestlogs==0.2.4

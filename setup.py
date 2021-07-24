@@ -93,7 +93,8 @@ requirements = [
     "pulpcore>=3.14.0,<3.15.0",
     "pulp-ansible>=0.9.0,<0.10.0",
     "django-prometheus>=2.0.0",
-    "drf-spectacular",
+    "django-ipware==3.0.2",
+    "django-requestlogs==0.2.4",
     "pulp-container>=2.7.0,<2.8.0",
 ]
 
